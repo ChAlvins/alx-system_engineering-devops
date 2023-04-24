@@ -3,8 +3,8 @@
 
 
 
-## Background Context
-In this project, we learn connecting to servers using `ssh`. 
+
+In this project, We work with Puppet as a configuration management tool. I practiced writing Puppet manifest files to create a file, install a package, and execute a command. 
 
 ## Resources
 
