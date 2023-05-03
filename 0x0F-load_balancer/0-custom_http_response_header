@@ -2,6 +2,28 @@
 # Configure Nginx so that its HTTP response contains a custom header
 # HTTP response contains a custom header (on web-01 and web-02)
 sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo sed -i "15i \\\tadd_header X-Served-By 166828-web-01;" /etc/nginx/nginx.conf
+sudo apt-get install -y nginx
+
+mkdir -p /var/www/html
+touch /var/www/html/index.html
+echo "Hello World" > /var/www/html/index.html
+touch /var/www/html/404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
+printf %s "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    add_header X-Served-By $HOSTNAME;
+    root   /var/www/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 http://cuberule.com/;
+    }
+    error_page 404 /404.html;
+    location /404 {
+      root /var/www/html;
+      internal;
+    }
+}" > /etc/nginx/sites-available/default
+
 sudo service nginx restart
