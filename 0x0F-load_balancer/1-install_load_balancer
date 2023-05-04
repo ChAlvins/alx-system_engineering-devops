@@ -19,4 +19,4 @@ frontend haproxy_balancer
         server 166828-web-01 100.26.222.47:80 check
         server 166828-web-02 35.153.67.249:80 check
 "
-service haproxy restart
+sudo service haproxy restart
