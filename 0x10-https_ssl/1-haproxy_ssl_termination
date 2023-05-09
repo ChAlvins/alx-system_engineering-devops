@@ -32,11 +32,17 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
-frontend http
+frontend www.chengosbest.tech-http-frontend
         bind *:80
-        mode http
-        default_backend web-backend
-    backend web-backend
+        http-request set-header X-Forwarded-Proto http
+        default_backend  web_servers-backend
+
+frontend  www.chengosbest.tech-https-frontend
+        bind *:443 ssl crt /etc/haproxy/certs/www.chengosbest.tech.pem
+        http-request set-header X-Forwarded-Proto https
+        default_backend web_servers-backend
+
+    backend web_servers-backend
         balance roundrobin
-        server 166828-web-01 100.26.222.47:80
-        server 166828-web-02 35.153.67.249:80
+        server 166828-web-01 100.26.222.47:80 check
+        server 166828-web-02 52.90.22.130:80 check
