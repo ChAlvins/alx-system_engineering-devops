@@ -8,6 +8,7 @@ global
         group haproxy
         daemon
 
+        maxconn 2048
         tune.ssl.default-dh-param 2048
 
         # Default SSL material locations
@@ -35,14 +36,12 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  www.chengosbest.tech
+listen 166828-lb-01
         bind *:80
         bind *:443 ssl crt /etc/haproxy/certs/www.chengosbest.tech.pem
-        http-request redirect scheme https code 301 unless { ssl_fc }
-        option forwardfor
-        default_backend web_servers-backend
-
-    backend web_servers-backend
+        mode http
+        redirect scheme https code 301 if !{ ssl_fc }
         balance roundrobin
+        option forwardfor
         server 166828-web-01 100.26.222.47:80 check
         server 166828-web-02 52.90.22.130:80 check
