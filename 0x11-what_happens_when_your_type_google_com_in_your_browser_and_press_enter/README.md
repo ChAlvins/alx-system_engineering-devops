@@ -45,12 +45,49 @@ Requirements, your post must cover:
 
 Publish your blog post on Medium or LinkedIn; share the URL of your blog post in your answer file and in the field below.
 
-Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
+### [1. Everything's better with a pretty diagram](https://github.com/vpnchengo/alx-system_engineering-devops/blob/master/0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter/1-what_happen_when_diagram)
+
+Add a schema to your blog post illustrating the flow of the request created when you type  `https://www.google.com`  in your browser and press  `Enter`.
+
+The diagram should show:
+
+-   DNS resolution
+-   that the request hitting server IP on the appropriate port
+-   that the traffic is encrypted
+-   that the traffic goes through a firewall
+-   that the request is distributed via a load balancer
+-   that the web server answers the request by serving a web page
+-   that the application server generates the web page
+-   that the application server request data from the database
+
+[Gliffy](https://www.gliffy.com/)  is free and what I personally use, but feel free to use what fits you best.
+
+Some unrelated examples:
+
+![](http://i.imgur.com/i9ivkdo.png)
+
+![](http://i.imgur.com/R8R3sqC.png)
+
+Share the URL of your diagram image 
+Remember  these blogs must be written in English to further your technical ability in a variety of settings.
+
+
+### [2. Contribute!]()
+
+Folks on the Internet have been trying to put together a comprehensive answer to the question. Help them by submitting a pull request. Paste the link in your answer file.
+
+[https://github.com/alex/what-happens-when#the-g-key-is-pressed](https://github.com/alex/what-happens-when#the-g-key-is-pressed)
+
+Requirements:
+
+-   The pull request must bring meaningful value (not a typo correction or style improvement)
+-   Share the pull request URL in your answer file and in the field below
+
 
 ----------
 
 
-## [](https://github.com/vpnchengo/alx-system_engineering-devops#authors)AUTHORS
+## [](https://github.com/vpnchengo/alx-system_engineering-devops#authors)AUTHOR
 
 -   [Alvin](https://github.com/vpnchengo)
 
