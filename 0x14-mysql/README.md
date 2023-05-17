@@ -13,7 +13,7 @@ _For this project, we expect you to look at these concepts:_
 	-   [MySQL primary/replicate setup](https://www.digitalocean.com/community/tutorials/how-to-set-up-replication-in-mysql)
 	-   [Build a robust database backup strategy](https://www.databasejournal.com/ms-sql/developing-a-sql-server-backup-strategy/)
 -   [Web stack debugging](https://intranet.alxswe.com/concepts/68)
--   [[How to] Install mysql 5.7](https://github.com/vpnchengo/alx-system_engineering-devops/blob/master/0x14-mysql/How_To_Install_mysql_5.7)
+
 ## [How To Install mysql 5.7]()
 
 Copy the key here to your clipboard
