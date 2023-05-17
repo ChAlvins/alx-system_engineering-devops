@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 # backup policy of all databases
 mysqldump --all-databases -u root -p "$1" > backup.sql
-day=$(date +"%d")
-month=$(date +"%m")
-year=$(date +"%Y")
-filename="$day-$month-$year"
-tar -czvf "$filename.tar.gz" backup.sql
+tar -czvf "$(date +%d-%m-%Y).tar.gz" backup.sql
