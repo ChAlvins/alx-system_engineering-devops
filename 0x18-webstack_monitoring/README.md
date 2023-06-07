@@ -18,7 +18,7 @@ Web stack monitoring can be broken down into 2 categories:
 
 ### Here are few famous monitoring tools:
 
-####NewRelic
+#### NewRelic
 
 NewRelic requires you to add a piece of JavaScript to your website, this agent will collect information and send it back to the New Relic servers. It will give you a detailed analysis of how quickly your website loads in a browser, with a detailed analysis at every level of the stack. If the website is loading too slowly or users are experiencing error (500), there is a feature that allows you to trigger an alert. NewRelic now does much more than this, I’ll let you discover the rest.
 
@@ -39,6 +39,7 @@ Nagios is an open source project started in 1999, it is among the most widely us
 Wavefront is a cutting edge monitoring service funded by great software engineers who’ve built monitoring tools for the best tech companies in Silicon Valley. The idea is to be able to analyze anything that can produce data points. A query language that looks like SQL allows users to apply mathematical operations to these data points to extract values or detect anomalies from the time series data. While it takes some time to get used to the tool, it’s the type of monitoring that the best companies are using. To my knowledge, LinkedIn, Facebook and DropBox are using a very similar tool for their monitoring needs.
 
 -   [Server]()
+
 Servers are located in datacenters which are buildings that host hundreds, or even thousands of computers (servers). You can think of a server as a computer without a keyboard, mouse, or screen, that is accessible only by a network. A server can be physical or virtual. A server runs an OS (operating system).
 
 -   [What is a server](https://en.wikipedia.org/wiki/Server_(computing)#Hardware_requirement)
